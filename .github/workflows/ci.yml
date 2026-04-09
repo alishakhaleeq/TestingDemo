@@ -24,3 +24,9 @@ jobs:
       
       - name: run the tests
         run: pytest -q
+
+      - name: Lint
+        run: flake8 src tests/
+
+      - name: Security scan
+        run: pip install bandit
